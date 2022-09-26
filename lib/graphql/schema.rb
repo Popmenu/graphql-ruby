@@ -1354,7 +1354,7 @@ module GraphQL
         else
           string_or_document
         end
-        query = GraphQL::Query.new(self, document: doc, context: context)
+        query = GraphQL::Query.new(self, nil, document: doc, context: context)
         validator_opts = { schema: self }
         rules && (validator_opts[:rules] = rules)
         validator = GraphQL::StaticValidation::Validator.new(**validator_opts)
