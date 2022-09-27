@@ -118,7 +118,7 @@ module GraphQL
       end
 
       if @query_string && !@query_string.is_a?(String)
-        raise ArgumentError, "Query string argument should be a String, got #{@query_string.class.name} instead."
+        raise ArgumentError, "Query string argument should be a String, got #{@query_string.class.name} instead: #{@query_string}"
       end
 
       # A two-layer cache of type resolution:
