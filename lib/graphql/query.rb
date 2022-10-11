@@ -118,6 +118,9 @@ module GraphQL
       end
 
       if @query_string && !@query_string.is_a?(String)
+        puts '=' * 80
+        puts caller
+        puts '=' * 80
         raise ArgumentError, "Query string argument should be a String, got #{@query_string.class.name} instead: #{@query_string}"
       end
 
